@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"6b0fc8b11b78d210","type":"text","text":"Function\n","x":-1010,"y":-1020,"width":250,"height":60},
+		{"id":"d2c5a04946576dd5","type":"file","file":"Character parsing.md","x":-1085,"y":-860,"width":400,"height":400},
+		{"id":"62f62d72fa3cb383","type":"file","file":"Alphabet to number.md","x":-1085,"y":-1640,"width":400,"height":400},
+		{"id":"0de1a562febf5d21","type":"text","text":"Input","x":-80,"y":-1470,"width":250,"height":60,"color":"1"},
+		{"id":"6d9ce37696a71ddf","type":"file","file":"Number Key.md","x":-1085,"y":480,"width":400,"height":400},
+		{"id":"264104666efca366","x":-1010,"y":1200,"width":250,"height":60,"color":"1","type":"text","text":"Output"},
+		{"id":"2c4a9c0e002a277a","type":"file","file":"Number to Hex.md","x":-1085,"y":-240,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"370fecd4165b999c","fromNode":"6b0fc8b11b78d210","fromSide":"bottom","toNode":"d2c5a04946576dd5","toSide":"top"},
+		{"id":"96f6a65556c4794e","fromNode":"d2c5a04946576dd5","fromSide":"bottom","toNode":"2c4a9c0e002a277a","toSide":"top","label":"Decimal Number"},
+		{"id":"954068fee14e1b75","fromNode":"62f62d72fa3cb383","fromSide":"bottom","toNode":"6b0fc8b11b78d210","toSide":"top","label":"string"},
+		{"id":"3bdf6f2ea4aa1a0f","fromNode":"2c4a9c0e002a277a","fromSide":"bottom","toNode":"6d9ce37696a71ddf","toSide":"top","label":"List of Hex numbers"},
+		{"id":"a7859d5310cb557e","fromNode":"0de1a562febf5d21","fromSide":"left","toNode":"62f62d72fa3cb383","toSide":"right","label":"String"},
+		{"id":"3841979a9e62abbc","fromNode":"6d9ce37696a71ddf","fromSide":"bottom","toNode":"264104666efca366","toSide":"top","label":"Prime key - Prime Hex key"}
+	]
+}

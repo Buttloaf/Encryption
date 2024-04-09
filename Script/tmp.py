@@ -1,20 +1,15 @@
 vowels = ['a', 'e', 'i', 'o', 'u']
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
-numbers = "0123456789"
+
 lis = []
 
 counter = 0
 
-for n in numbers:
-	tmp = n
+for n in range(256):
+	tmp = chr(n)
 	lis.append(tmp)
 	counter += 1
-	
-for a in alphabet:
-	tmp =a
-	lis.append(tmp)
-	counter +=1
 
 for i in vowels:
 	for n in alphabet:

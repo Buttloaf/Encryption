@@ -14,19 +14,12 @@ with open(sys.argv[3]) as li:
 
 for l in lines:
 	
-	numbered.append(int(l, base=16) / int(key))
+	numbered.append(int(l) / int(key))
 
 
 texed = []
 
 for n in numbered:
 	texed.append(lis[int(n)])
-	
-txt = ""
-for t in texed:
-	for i in t:
-		if i != '\n':
-			txt += ''.join(i)
-			
 
-print(txt)
+

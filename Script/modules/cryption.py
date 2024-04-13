@@ -3,6 +3,13 @@ import os
 import sys
 import rnw
 
+def checkindex(l1, v1):
+	count = 0
+	for l in l1:
+		if v1 == l:
+			return count
+		count += 1
+
 #Functions
 #############################
 
@@ -17,15 +24,16 @@ def FileToNum(string, list_file_dt, dup):
 		counter = 0
 		while counter < len(s):
 		
-			if counter != len(s)-1 and dup in s[counter+1]:
+			if counter != len(s)-1 and s[counter+1] in dup :
 			
-				numbered.append(list_file_dt.index(s[counter] + s[counter+1] + '\n'))
+				numbered.append(checkindex(list_file_dt, (s[counter] + s[counter+1] + '\n')))
 			
 				counter +=1
 			
 			else:
-
-				numbered.append(list_file_dt.index(s[counter] + '\n'))
+				
+				tmp = s[counter] + '\n'
+				numbered.append(checkindex(list_file_dt, s[counter]+'\n'))
 			
 			counter += 1
 
@@ -41,15 +49,15 @@ def TextToNum(string, list_file_dt, dup):
 	#going through each element of given string and converting it to decimal with duplicates
 	while counter < len(string):
 		
-		if counter != len(string)-1 and dup in string[counter+1]:
+		if counter != len(string)-1 and string[counter+1] in dup:
 	
-			numbered.append(ch.checkindex(list_file_dt, string[counter] + string[counter+1] + '\n')[0])
+			numbered.append(checkindex(list_file_dt, string[counter] + string[counter+1] + '\n')[0])
 	
 			counter +=1
 	
 		else:
 	
-			numbered.append(ch.checkindex(list_file_dt, string[counter] + '\n')[0])
+			numbered.append(checkindex(list_file_dt, string[counter] + '\n')[0])
 	
 		counter += 1
 	
